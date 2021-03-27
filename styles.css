@@ -1,6 +1,53 @@
 body {
   margin: 0;
   padding: 0;
-  /* background-image: url("circuit.png"); */
+  background-image: url("images/circuit.png");
   font-family: "Fira Code", sans-serif;
+}
+
+.menu {
+  background-color: #fff;
+  height: 100vh;
+  width: 10%;
+  margin: 0;
+  list-style: none;
+}
+li {
+  padding-top: 15px;
+}
+li > a {
+  text-decoration: none;
+  font-size: 28px;
+  color: #6633ff;
+}
+
+.modal {
+  position: absolute;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 15px;
+  transform: translateX(66%) translateY(30vh);
+  font-size: 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 2px #ccc;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}
+
+.modal::after {
+  content: "!";
+  color: red;
+  font-size: 40px;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  transition: 0.5s;
+}
+
+.modal:hover::after {
+  transform: scale(1.5);
+}
+
+.modal:hover {
+  border: 1px solid red;
 }
