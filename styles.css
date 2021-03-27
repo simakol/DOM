@@ -20,7 +20,44 @@ li > a {
   font-size: 28px;
   color: #6633ff;
 }
+/*TODO: сделать возвращение анимации текста*/
+li > a:hover::after {
+  content: "";
+  width: 55%;
+  height: 1px;
+  background-color: #6633ff;
+  display: block;
+  position: relative;
+  animation: line-left 0.7s cubic-bezier(0.46, -0.02, 0.16, 0.9) 1 forwards
+    alternate;
+}
+li > a:hover::before {
+  content: "";
+  width: 55%;
+  height: 1px;
+  background-color: #6633ff;
+  display: block;
+  position: relative;
+  animation: line-right 0.7s cubic-bezier(0.46, -0.02, 0.16, 0.9) 1 forwards
+    alternate;
+}
 
+@keyframes line-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 15px;
+  }
+}
+@keyframes line-right {
+  from {
+    right: 0;
+  }
+  to {
+    right: 15px;
+  }
+}
 .modal {
   position: absolute;
   background-color: #fff;
