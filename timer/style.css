@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("circuit.png");
+  font-family: "Fira Code", sans-serif;
+}
+.home-btn {
+  text-decoration: none;
+  padding: 13px 20px;
+  color: #fff;
+  background-color: #999999;
+  border-radius: 15px;
+  margin: 10px;
+  display: inline-block;
+  transition: 0.7s;
+  box-shadow: 3px 3px 2px #ccc;
+}
+.home-btn:hover {
+  background-color: #818080;
+  transform: scale(1.1);
+}
+
+.container {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  background: #fff;
+  border-radius: 20px;
+  width: 25%;
+  margin: 5% auto;
+  padding: 50px;
+  box-shadow: 7px 8px 9px #ccc;
+}
+
+.btn {
+  padding: 13px 20px;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 30px;
+  transition: 0.7s;
+  box-shadow: 3px 3px 2px #ccc;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.time {
+  font-size: 40px;
+}
+.time::after {
+  content: ":";
+  position: relative;
+  left: 3px;
+  top: -1px;
+}
+.time.time-pause::after {
+  animation: blink 0.5s ease-in-out infinite alternate;
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.time:last-child::after {
+  content: "";
+}
+
+.start {
+  background-color: rgb(53, 241, 15);
+  display: none;
+}
+.start.active {
+  display: inline-block;
+}
+.start:hover {
+  background-color: rgb(71, 190, 48);
+}
+.pause {
+  background-color: rgb(236, 160, 20);
+  display: none;
+}
+.pause.active {
+  display: inline-block;
+}
+.pause:hover {
+  background-color: rgb(218, 205, 31);
+}
+
+.continue.active {
+  display: inline-block;
+}
+.clear {
+  background-color: rgb(240, 16, 16);
+}
+.clear:hover {
+  background-color: rgb(202, 39, 39);
+}
